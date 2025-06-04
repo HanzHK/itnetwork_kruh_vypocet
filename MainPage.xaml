@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kruh_vypocet.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Grid.Column="0" Padding="30,0" Spacing="5">
+            <Label
+                Text="PI-MP"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="π-Math Pro"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="π-Math Pro" />
+            <Label
+                Text="Aplikace pro výpočet obvodu a obsahu kruhu"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Aplikace pro výpočet obvodu a obsahu kruhu" 
+                            />
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" >
+                <Label Text="Poloměr:" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0" VerticalOptions="Center" />
+                <Entry x:Name="PolomerEntry" Grid.Row="0" Grid.Column="1" Placeholder="Zadej poloměr" WidthRequest="100"/>
+            </HorizontalStackLayout>
+
+            <Button
+                x:Name="VypocitejBtn"
+                Text="Vypočítej" 
+                Margin="20"
+                SemanticProperties.Hint="Vypočítá obvod a obsahu kruhu"
+                Clicked="VypocitejBtnClicked"
+                HorizontalOptions="Center" />
+
+            <Label x:Name="VysledekObvodLabel"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
