@@ -21,6 +21,13 @@
                 SemanticProperties.HeadingLevel="Level3"
                 SemanticProperties.Description="Aplikace pro výpočet obvodu a obsahu kruhu" 
                             />
+            <Picker x:Name="JednotkyPicker"
+                Title="Vyber jednotku"
+                SelectedIndex="0"
+                VerticalOptions="Center"    
+                WidthRequest="100"
+                    />
+
             <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" >
                 <Label Text="Poloměr:" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0" VerticalOptions="Center" />
                 <Entry x:Name="PolomerEntry" Grid.Row="0" Grid.Column="1" Placeholder="Zadej poloměr" WidthRequest="100"/>
@@ -35,6 +42,10 @@
                 HorizontalOptions="Center" />
 
             <Label x:Name="VysledekObvodLabel"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+            <Label x:Name="VysledekObsahLabel"
                FontSize="18"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
